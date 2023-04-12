@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba Tecnica - Audax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Suma de Valores</h1>
+    <form id="sumaForm">
+        Valor 1: <input type="number" id="valor1" name="valor1"><br>
+        Valor 2: <input type="number" id="valor2" name="valor2"><br>
+        <input type="submit" value="Calcular">
+    </form>
+
+    <h2>Resultado</h2>
+    <div id="resultado"></div>
+</div>
+
+    <script>
+        document.getElementById('sumaForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var valor1 = document.getElementById('valor1').value;
+            var valor2 = document.getElementById('valor2').value;
+
+            //Enviar la solicitud AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById('resultado').textContent = 'Resultado: ' + response.resultado;
+                    } else {
+                        document.getElementById('resultado').textContent = 'Erro ao calcular';
+                    }
+                }
+            };
+            xhr.open('POST', 'suma.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+            xhr.send('valor1=' + valor1 + '&valor2=' + valor2);
+        });
+    </script>
+</body>
+</html>

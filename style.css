@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el título */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #FFA800;
+}
+
+/* Estilos para el formulario */
+#sumaForm {
+    text-align: center;
+    margin-top: 40px;
+}
+
+input[type="number"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color:#FFA800;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para el resultado */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #FFA800;
+}
+
+#resultado {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
