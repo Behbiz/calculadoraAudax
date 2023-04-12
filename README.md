@@ -14,7 +14,8 @@ El proyecto utiliza las siguientes tecnologías:
 Para utilizar la aplicación, sigue los siguientes pasos:
 
 - Clona este repositorio en tu máquina local o descarga los archivos en formato ZIP.
-- Abre el archivo index.html en tu navegador web.
+- Mova el archivo a su servidor web.
+- Abre el archivo index.html en localhost.
 - Ingresa dos valores numéricos en los campos "Valor 1" y "Valor 2".
 - Haz clic en el botón "Calcular" para enviar el formulario.
 - El resultado de la suma se mostrará en la sección "Resultado" de la página.
